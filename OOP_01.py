@@ -23,6 +23,7 @@
 
 # my_trip.stoped()
 
+
 #### Update above example with reduce line of codes
 class Trip :
 
@@ -37,7 +38,14 @@ class Trip :
         print("----My Trip Details : -----")
         print(f"Amount : $ {self.amount}")
         print(f"Vehicle : {self.vehicle}")
-        print(f"Hours : {self.hours} hours")
+        print(f"Hours : {self.hours} hours\n")
 
-my_trip = Trip(1500, "Car", 4)
-my_trip.stoped()
+# 3 objects created
+current_trip = Trip(1500, "Car", 4)
+current_trip.stoped()
+
+past_trip = Trip(3000, "Bus", 7)
+past_trip.stoped()
+
+future_trip = Trip(500, "TukTuk", 2)
+future_trip.stoped()
