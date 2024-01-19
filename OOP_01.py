@@ -51,6 +51,7 @@
 # future_trip.stoped()
 
 
+######## Example 02 :
 class Train :
 
     def __init__(self, price, total_sheets) :
