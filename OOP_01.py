@@ -52,49 +52,100 @@
 
 
 ######## Example 02 :
-class Train :
+# class Train :
 
-    def __init__(self, price, total_sheets) :
-        self.price = price
-        self.total_sheets = total_sheets
-        # self.available_sheets = available_sheets
+#     def __init__(self, price, total_sheets) :
+#         self.price = price
+#         self.total_sheets = total_sheets
+#         # self.available_sheets = available_sheets
 
-    def reservation(self, option) :
-        if (option.lower() == "y") :
-            print(f"Total price : {self.price + 300}")
-            print("Your ticket was reserved successfully")
-        else :
-            print(f"Total price : {self.price}")
-            print("Your ticket was reserved successfully")
+#     def reservation(self, option) :
+#         if (option.lower() == "y") :
+#             print(f"Total price : {self.price + 300}")
+#             print("Your ticket was reserved successfully")
+#         else :
+#             print(f"Total price : {self.price}")
+#             print("Your ticket was reserved successfully")
 
 
-class1 = class2 = class3 = 1
-avSheetsC1 = 50
-avSheetsC2 = 120
-avSheetsC3 = 250
+# class1 = class2 = class3 = 1
+# avSheetsC1 = 50
+# avSheetsC2 = 120
+# avSheetsC3 = 250
 
-while(class1 <= 50 or class2 <= 120 or class3 <= 250) :
-    classNo = int(input("\nWhich class do you want to ticket reservation (1/2/3): "))
+# while(class1 <= 50 or class2 <= 120 or class3 <= 250) :
+#     classNo = int(input("\nWhich class do you want to ticket reservation (1/2/3): "))
 
-    if (classNo == 1 and avSheetsC1 > 0) :
-        ticket = Train(1350, 50)
-        print(f"Available number of sheets in {classNo} class : {avSheetsC1} sheets")
-        avSheetsC1 -= 1
+#     if (classNo == 1 and avSheetsC1 > 0) :
+#         ticket = Train(1350, 50)
+#         print(f"Available number of sheets in {classNo} class : {avSheetsC1} sheets")
+#         avSheetsC1 -= 1
 
-    elif (classNo == 2 and avSheetsC2 > 0) :
-        ticket = Train(950, 120)
-        print(f"Available number of sheets in {classNo} class : {avSheetsC2} sheets")
-        avSheetsC2 -= 1
+#     elif (classNo == 2 and avSheetsC2 > 0) :
+#         ticket = Train(950, 120)
+#         print(f"Available number of sheets in {classNo} class : {avSheetsC2} sheets")
+#         avSheetsC2 -= 1
 
-    elif (classNo == 3 and avSheetsC2 > 0) :
-        ticket = Train(400, 250)
-        print(f"Available number of sheets in {classNo} class : {avSheetsC3} sheets")
-        avSheetsC3 -= 1
+#     elif (classNo == 3 and avSheetsC2 > 0) :
+#         ticket = Train(400, 250)
+#         print(f"Available number of sheets in {classNo} class : {avSheetsC3} sheets")
+#         avSheetsC3 -= 1
 
-    else :
-        print("Enter valided input!!!")
-        break
+#     else :
+#         print("Enter valided input!!!")
+#         break
 
-    if classNo in [1, 2, 3] :
-        option = input("Do you want to food (y/n) ? : ")
-        ticket.reservation(option)
+#     if classNo in [1, 2, 3] :
+#         option = input("Do you want to food (y/n) ? : ")
+#         ticket.reservation(option)
+
+# #### Example 03 : 
+
+# class Fruit : 
+
+#     def __init__(self, color) :
+#         self.color = color
+
+# apple = Fruit("Red")
+# print(apple.color)
+
+# ### Example 04:
+# class Teacher :
+#     def __init__(self, name, regno) :
+#         self.name = name
+#         self.regno = regno
+
+#     def display(self) :
+#         print("\nTeacher's Name : ", self.name)
+#         print("Teacher's registration number : ", self.regno)
+
+
+# t1 = Teacher("Jenifer", 34262)
+# t2 = Teacher("David", 89289)
+
+# t1.display()
+# t2.display()
+
+### Example 05:
+class Calculator:
+    def __init__(self, value1, value2) :
+        self.number1 = value1
+        self.number2 = value2
+
+    def add(self) :
+        return self.number1+self.number2
+    
+    def sub(self) :
+        return self.number1-self.number2
+    
+    def mul(self) :
+        return self.number1*self.number2
+    
+    def div(self) :
+        return self.number1/self.number2
+    
+operation1 = Calculator(78, 54)
+print(operation1.add())
+print(operation1.sub())
+print(operation1.mul())
+print(round(operation1.div(), 3))
