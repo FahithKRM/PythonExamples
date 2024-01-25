@@ -169,22 +169,63 @@
 # apple.display()
 
 ###### ----- Class variable
-class Phone:
-    chager_type = "Micro type-B"
+# class Phone:
+#     chager_type = "Micro type-B"
 
-    def __init__(self, brand, price) :
-        self.brand = brand
+#     def __init__(self, brand, price) :
+#         self.brand = brand
+#         self.price = price
+
+#     def display(self) :
+#         print(f"\nBrand : {self.brand}")
+#         print(f"Price Rs.: {self.price}")
+#         print(f"Charger Type : {self.chager_type}")
+
+# Phone.chager_type = "Type-C"
+
+# sumsung = Phone("Sumsung - A03", 23000)
+# sumsung.display()
+
+# apple = Phone("Iphone 15 pro", 75000)
+# apple.display()
+
+###### Example : 07 #instance method
+class Labtop:
+    chager_type = "Cyindrical Connector"
+
+    def __init__(self) :
+        self.model = None
+        self.price = 1200000
+
+    def setPrice(self, price):
         self.price = price
+    
+    def getPrice(self) :
+        print(f"Price : {self.price}")
+        print(f"Charger Type : {self.chager_type}") 
+        print("Instant method\n")  
 
-    def display(self) :
-        print(f"\nBrand : {self.brand}")
-        print(f"Price Rs.: {self.price}")
-        print(f"Charger Type : {self.chager_type}")
+    @classmethod
+    def setChargerType(cls):
+        chager_type = "Type-C"
+        print(f"charger type : {chager_type}")
+        print("Class method\n")  
+  
+    @staticmethod
+    def staticMethod():
+        print("Static method")
 
-Phone.chager_type = "Type-C"
+#instant method
+msi = Labtop()
+msi.setPrice(150000)
+msi.getPrice()
 
-sumsung = Phone("Sumsung - A03", 23000)
-sumsung.display()
+#class method
+dell = Labtop()
+dell.setChargerType()
+Labtop.setChargerType()
 
-apple = Phone("Iphone 15 pro", 75000)
-apple.display()
+#static method
+hp = Labtop()
+hp.staticMethod()
+Labtop.staticMethod()
