@@ -126,26 +126,65 @@
 # t1.display()
 # t2.display()
 
-### Example 05:
-class Calculator:
-    def __init__(self, value1, value2) :
-        self.number1 = value1
-        self.number2 = value2
+# ### Example 05:
+# class Calculator:
+#     def __init__(self, value1, value2) :
+#         self.number1 = value1
+#         self.number2 = value2
 
-    def add(self) :
-        return self.number1+self.number2
+#     def add(self) :
+#         return self.number1+self.number2
     
-    def sub(self) :
-        return self.number1-self.number2
+#     def sub(self) :
+#         return self.number1-self.number2
     
-    def mul(self) :
-        return self.number1*self.number2
+#     def mul(self) :
+#         return self.number1*self.number2
     
-    def div(self) :
-        return self.number1/self.number2
+#     def div(self) :
+#         return self.number1/self.number2
     
-operation1 = Calculator(78, 54)
-print(operation1.add())
-print(operation1.sub())
-print(operation1.mul())
-print(round(operation1.div(), 3))
+# operation1 = Calculator(78, 54)
+# print(operation1.add())
+# print(operation1.sub())
+# print(operation1.mul())
+# print(round(operation1.div(), 3))
+
+### Example : 06 ----Instant variable
+# class Phone:
+#     def __init__(self, brand, price, chager_type) :
+#         self.brand = brand
+#         self.price = price
+#         self.chager_type = chager_type #instant varilable
+
+#     def display(self) :
+#         print(f"\nBrand : {self.brand}")
+#         print(f"Price Rs.: {self.price}")
+#         print(f"Charger Type : {self.chager_type}")
+
+# sumsung = Phone("Sumsung - A03", 23000, "B-type")
+# sumsung.display()
+
+# apple = Phone("Iphone 15 pro", 75000, "Lighting Connecter")
+# apple.display()
+
+###### ----- Class variable
+class Phone:
+    chager_type = "Micro type-B"
+
+    def __init__(self, brand, price) :
+        self.brand = brand
+        self.price = price
+
+    def display(self) :
+        print(f"\nBrand : {self.brand}")
+        print(f"Price Rs.: {self.price}")
+        print(f"Charger Type : {self.chager_type}")
+
+Phone.chager_type = "Type-C"
+
+sumsung = Phone("Sumsung - A03", 23000)
+sumsung.display()
+
+apple = Phone("Iphone 15 pro", 75000)
+apple.display()
