@@ -190,42 +190,60 @@
 # apple.display()
 
 ###### Example : 07 #instance method
-class Labtop:
-    chager_type = "Cyindrical Connector"
+# class Labtop:
+#     chager_type = "Cyindrical Connector"
 
-    def __init__(self) :
-        self.model = None
-        self.price = 1200000
+#     def __init__(self) :
+#         self.model = None
+#         self.price = 1200000
 
-    def setPrice(self, price):
-        self.price = price
+#     def setPrice(self, price):
+#         self.price = price
     
-    def getPrice(self) :
-        print(f"Price : {self.price}")
-        print(f"Charger Type : {self.chager_type}") 
-        print("Instant method\n")  
+#     def getPrice(self) :
+#         print(f"Price : {self.price}")
+#         print(f"Charger Type : {self.chager_type}") 
+#         print("Instant method\n")  
 
-    @classmethod
-    def setChargerType(cls):
-        chager_type = "Type-C"
-        print(f"charger type : {chager_type}")
-        print("Class method\n")  
+#     @classmethod
+#     def setChargerType(cls):
+#         chager_type = "Type-C"
+#         print(f"charger type : {chager_type}")
+#         print("Class method\n")  
   
-    @staticmethod
-    def staticMethod():
-        print("Static method")
+#     @staticmethod
+#     def staticMethod():
+#         print("Static method")
 
-#instant method
-msi = Labtop()
-msi.setPrice(150000)
-msi.getPrice()
+# #instant method
+# msi = Labtop()
+# msi.setPrice(150000)
+# msi.getPrice()
 
-#class method
-dell = Labtop()
-dell.setChargerType()
-Labtop.setChargerType()
+# #class method
+# dell = Labtop()
+# dell.setChargerType()
+# Labtop.setChargerType()
 
-#static method
-hp = Labtop()
-hp.staticMethod()
-Labtop.staticMethod()
+# #static method
+# hp = Labtop()
+# hp.staticMethod()
+# Labtop.staticMethod()
+
+#### Example : 08 ## Inheridance
+class Vehicle() :
+    def feul(self) :
+        print("Hybrid")
+    
+class Car() :
+    def no_sheets(self) :
+        print("4 sheets")
+
+class Honda(Car, Vehicle) :
+    def model(self) :
+        print("Fit")
+
+obj = Honda()
+obj.feul()
+obj.no_sheets()
+obj.model()
